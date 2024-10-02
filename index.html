@@ -4,43 +4,44 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>pH och Fuktighet</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 20px;
-        }
-        form {
-            margin-bottom: 20px;
-        }
-        label {
-            display: block;
-            margin-bottom: 5px;
-        }
-        input {
-            margin-bottom: 10px;
-            padding: 5px;
-        }
-        #result {
-            font-weight: bold;
-            margin-top: 10px;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <h1>pH och Fuktighet</h1>
     
     <form id="dataForm">
-        <label for="phValue">Skriv in ditt pH-värde:</label>
+        <label for="phValue">Skriv in ditt pH-värde:
+            <span class="info">?
+                <span class="info-text">För att mäta ditt ph-värde behövs en ph-mätare. Lägg din jord i en burk och fyll med vatten. Sedan doppa ph-mätar stickan och jämför färgen med vilket ph-värde den står för.</span>
+            </span>
+        </label>
         <input type="number" id="phValue" name="phValue" required>
 
-        <label for="moistureValue">Skriv in din vattenfuktighetsprocent:</label>
+        <label for="moistureValue">Skriv in din jordfuktighetsprocent:
+            <span class="info">?
+                <span class="info-text">För att mäta din jordfuktighet behövs en fuktighets mätare, sedan stick ner den i din jord och skriv in procent enheten.</span>
+            </span>
+        </label>
         <input type="number" id="moistureValue" name="moistureValue" required>
+        
+        <label for="soilColor">Välj jordens färg:
+            <span class="info">?
+                <span class="info-text">Om du är osäker på vilken färg din jord är, välj den färg som närmst liknar den du har.</span>
+            </span>
+        </label>
+        <select id="soilColor" name="soilColor">
+            <option value="Mörkbrun">Mörkbrun</option>
+            <option value="Ljusbrun">Ljusbrun</option>
+            <option value="Röd">Röd</option>
+            <option value="Svart">Svart</option>
+            <option value="Grå">Grå</option>
+        </select>
         <br>
-        <button type="submit">Skicka</button>
+        <button type="submit">Kalkulera bäst gröda för dig</button>
     </form>
 
     <div id="result"></div>
 
-    <script src = "script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
