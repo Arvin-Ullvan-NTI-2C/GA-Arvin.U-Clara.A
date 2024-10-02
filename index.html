@@ -1,24 +1,46 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="sv">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="style.css" rel="stylesheet" type="text/css"/>
-    <title>Document</title>
+    <title>pH och Fuktighet</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        form {
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        input {
+            margin-bottom: 10px;
+            padding: 5px;
+        }
+        #result {
+            font-weight: bold;
+            margin-top: 10px;
+        }
+    </style>
 </head>
 <body>
-    <h1> Enter your name</h1>
-    <input type = "text" id = "nameBox">
-    <button type = "Button" onclick="greeting()">Enter</button>
-    <script src = "script.js"></script>
-
-    <div id = "output">
-    </div>
-
-    <div id = "container">
-        <button id ="button1">button1</button>
-    </div>
+    <h1>pH och Fuktighet</h1>
     
+    <form id="dataForm">
+        <label for="phValue">Skriv in ditt pH-värde:</label>
+        <input type="number" id="phValue" name="phValue" required>
+
+        <label for="moistureValue">Skriv in din vattenfuktighetsprocent:</label>
+        <input type="number" id="moistureValue" name="moistureValue" required>
+
+        <button type="submit">Skicka</button>
+    </form>
+
+    <div id="result"></div>
+
+    <script src = "script.js"></script>
 </body>
 </html>

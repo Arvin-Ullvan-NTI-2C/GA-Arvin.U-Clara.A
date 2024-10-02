@@ -1,17 +1,30 @@
-function greeting() {
-    let name = document.getElementById("nameBox");
-    let out = document.getElementById("output");
-    out.innerHTML = "hello " + name.value
-}
+  document.getElementById('dataForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Förhindra formulärets standardbeteende (att ladda om sidan)
+            
+            // Hämta värden från formuläret
+            const ph = parseInt(document.getElementById('phValue').value);
+            const moisture = parseInt(document.getElementById('moistureValue').value);
 
-var div = document.querySelector("#container"),
-    frag = document.createDocumentFragment(),
-    select = document.createElement("select");
+            // Skapa en tom array för output
+            let output = [];
 
-select.options.add( new Option("Method1","AU", true, true) );
-select.options.add( new Option("Method2","FI") );
+            // Lägg till "morot" om pH-värdet är mindre än 7, annars "potatis"
+            if (ph < 7) {
+                output.push("morot");
+            } else {
+                output.push("potatis");
+            }
 
+            // Om fuktigheten är över 30 %, ta bort "morot" från arrayen
+            if (moisture > 30) {
+                output = output.filter(item => item !== "morot");
+            }
 
-frag.appendChild(select);
-div.appendChild(frag);
-
+            // Visa resultatet på sidan
+            const resultDiv = document.getElementById('result');
+            if (output.length > 0) {
+                resultDiv.textContent = "Din rekommenderade gröda är: " + output.join(", ");
+            } else {
+                resultDiv.textContent = "Ingen gröda rekommenderas.";
+            }
+        });
