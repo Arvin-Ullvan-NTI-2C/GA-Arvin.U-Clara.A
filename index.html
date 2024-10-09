@@ -12,14 +12,14 @@
     <form id="dataForm">
         <label for="phValue">Skriv in ditt pH-värde:
             <span class="info">?
-                <span class="info-text">För att mäta ditt ph-värde behövs en ph-mätare. Lägg din jord i en burk och fyll med vatten. Sedan doppa ph-mätar stickan och jämför färgen med vilket ph-värde den står för.</span>
+                <span class="info-text">För att mäta ditt ph-värde behövs en ph-mätare. Lägg din jord i en burk och fyll med vatten. Sedan doppa ph-mätar stickan och jämför färgen med vilket ph-värde den står för. Avrunda sedan till närmsa hel eller halvtal.</span>
             </span>
         </label>
-        <input type="number" id="phValue" name="phValue" required>
+        <input type="number" id="phValue" name="phValue" step="0.5" required>
 
         <label for="moistureValue">Skriv in din jordfuktighetsprocent:
             <span class="info">?
-                <span class="info-text">För att mäta din jordfuktighet behövs en fuktighets mätare, sedan stick ner den i din jord och skriv in procent enheten.</span>
+                <span class="info-text">För att mäta din jordfuktighet behövs en fuktighets mätare, sedan stick ner den i din jord och skriv in procent enheten. Avrunda ditt resultat till närmsta 5% eller 10%</span>
             </span>
         </label>
         <input type="number" id="moistureValue" name="moistureValue" required>
@@ -30,11 +30,10 @@
             </span>
         </label>
         <select id="soilColor" name="soilColor">
-            <option value="Mörkbrun">Mörkbrun</option>
             <option value="Ljusbrun">Ljusbrun</option>
-            <option value="Röd">Röd</option>
+            <option value="Brun"> Brun</option>
+            <option value="Mörkbrun">Mörkbrun</option>
             <option value="Svart">Svart</option>
-            <option value="Grå">Grå</option>
         </select>
         <br>
         <button type="submit">Kalkulera den mest optimala grödan för dig</button>

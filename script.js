@@ -18,76 +18,186 @@ document.getElementById('dataForm').addEventListener('submit', function(event) {
         return; // Avbryt om värdet är utanför gränserna
     }
 
-    
+    var potatis = {
+        ph: [5.5,6,6.5],
+        moisture: [60, 65, 70, 75, 80],
+        namn: "potatis",
+        soilColor: ["Ljusbrun", "Brun"]
+    }
+
     var vete = {
-        ph: 5,
-        moisture: [30],
+        ph: [6.0,6.5,7.0,7.5],
+        moisture: [50, 55, 60, 65, 70],
         namn: "vete",
-        soilColor: "Ljusbrun"
+        soilColor: ["Brun", "Mörkbrun"]
+    }
+
+    var korn = {
+        ph: [6.0,6.5,7.5],
+        moisture: [50,55,60, 65, 70],
+        namn: "korn",
+        soilColor: ["Brun", "Mörkbrun"]
+    }
+
+    var raps = {
+        ph: [6.0,6.5,7.0,7.5],
+        moisture: [50,55,60, 65, 70,],
+        namn: "raps",
+        soilColor: ["Brun", "Mörkbrun"]
     }
 
     var morot = {
-        ph: 5,
-        moisture: [30],
+        ph: [6.0,6.5,7.0],
+        moisture: [50,55,60,65,70],
         namn: "morot",
-        soilColor: "Ljusbrun"
+        soilColor: ["Ljusbrun", "Brun"]
     }
 
-    var potatis = {
-        ph: 6,
-        moisture: [60, 65, 70, 75, 80],
-        namn: "potatis",
-        soilColor: "Ljusbrun"
+    var artor = {
+        ph: [6.0,6.5,7.0,7.5],
+        moisture: [50,55,60,65,70],
+        namn: "ärtor",
+        soilColor: ["Brun", "Mörkbrun"]
     }
 
-    var rodbeta = {
-        ph: 5,
-        moisture: [30],
-        namn: "rödbeta",
-        soilColor: "Svart"
+    var kal = {
+        ph: [6.0,6.5,7.0,7.5],
+        moisture: [50,55,60,65,70],
+        namn: "kål",
+        soilColor: ["Brun", "Mörkbrun"]
+    }
+
+    var rag = {
+        ph: [5.5,6.0,6.5,7.0],
+        moisture: [50, 55, 60, 65, 70],
+        namn: "råg",
+        soilColor: ["Brun", "Mörkbrun"]
+    }
+
+    var sockerbeta = {
+        ph: [6.0,6.5,7.0],
+        moisture: [50,55,60,65,70],
+        namn: "sockerbeta",
+        soilColor: ["Brun", "Mörkbrun"]
     }
 
     var majs = {
-        ph: 5,
-        moisture: [35],
+        ph: [6.0,6.5,7.0],
+        moisture: [60, 65, 70, 75, 80],
         namn: "majs",
-        soilColor: "Ljusbrun"
+        soilColor: ["Brun", "Mörkbrun"]
+    }
+
+    var bonor = {
+        ph: [6.0,6.5,7.0,7.5],
+        moisture: [50,55,60,65,70],
+        namn: "bönor",
+        soilColor: ["Brun", "Mörkbrun"]
+    }
+
+    var karlselleri = {
+        ph: [6.0,6.5,7.0],
+        moisture: [60,65,70,75,80],
+        namn: "kärlselleri",
+        soilColor: ["Mörkbrun", "Svart"]
+    }
+
+    var tomater = {
+        ph: [6.0,6.5,7.0],
+        moisture: [60,65,70],
+        namn: "tomater",
+        soilColor: ["Brun", "Ljusbrun"]
+    }
+
+    var sallad = {
+        ph: [6.0,6.5,7.0],
+        moisture: [50,55,60,65,70],
+        namn: "sallad",
+        soilColor: ["Ljusbrun", "Brun"]
+    }
+
+    var kryddor = {
+        ph: [6.0,6.5,7.0],
+        moisture: [50,55,60],
+        namn: "kryddor (tex. basilika, persilja)",
+        soilColor: ["Brun", "Mörkbrun"]
+    }
+
+    var zucchini = {
+        ph: [6.0,6.5,7.0],
+        moisture: [60,65,70],
+        namn: "zucchini",
+        soilColor: ["Brun", "Ljusbrun"]
+    }
+
+    var rodbeta = {
+        ph: [6.0,6.5,7.0],
+        moisture: [50,55,60,65,70],
+        namn: "rödbeta",
+        soilColor: ["Ljusbrun", "Brun"]
     }
 
     var havre = {
-        ph: 6,
-        moisture: [30],
+        ph: [6.0,6.5,7.0],
+        moisture: [50,55,60,65,70],
         namn: "havre",
-        soilColor: "Ljusbrun"
+        soilColor: ["Brun", "Mörkbrun"]
     }
 
+    let grodor = [potatis, vete, korn, raps, morot, artor, kal, rag, sockerbeta, majs, bonor, karlselleri, tomater, sallad, kryddor, zucchini, rodbeta, havre];
     let output = [];
-    let grodor = [vete, morot, potatis, rodbeta, majs, havre];
     grodor.forEach((element) => output.push(element.namn));
 
 
     for (let i = 0; i < grodor.length; i++) {
-        let y = 0;
-        if (grodor[i].ph !== ph) {
-            output = output.filter( item => item !== grodor[i].namn);
-        }
         
-        while (y < grodor[i].length) {
-            if (grodor[i].moisture[y] !== moisture) {
+        y = 0
+        counter = 0
+       
+        while (y < grodor[i].ph.length) {
+            if (grodor[i].ph[y] !== ph) {
+               counter += 1
+            }
+
+            if (counter == grodor[i].ph.length){
                 output = output.filter( item => item !== grodor[i].namn);
             }
             y += 1
         }
 
-        if (grodor[i].soilColor !== soilColor) {
-            output = output.filter( item => item !== grodor[i].namn);
+        y = 0
+        counter = 0
+            
+        while (y < grodor[i].moisture.length) {
+            if (grodor[i].moisture[y] !== moisture) {
+               counter += 1
+            }
+
+            if (counter == grodor[i].moisture.length){
+                output = output.filter( item => item !== grodor[i].namn);
+            }
+            y += 1
+        }
+        
+        y = 0
+        counter = 0
+
+        while (y < grodor[i].soilColor.length) {
+            if (grodor[i].soilColor[y] !== soilColor) {
+               counter += 1
+            }
+
+            if (counter == grodor[i].soilColor.length){
+                output = output.filter( item => item !== grodor[i].namn);
+            }
+            y += 1
         }
     }
 
 
     // Visa resultatet på sidan
     const resultDiv = document.getElementById('result');
-    if (output.length > 0) {
-        resultDiv.textContent = "Din mest optimala gröda är: " + output.join(", ");
-    }
+  
+    resultDiv.textContent = "Din mest optimala gröda är: " + output.join(", ");
+    
 });
