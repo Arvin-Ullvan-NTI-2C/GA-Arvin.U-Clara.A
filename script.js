@@ -18,35 +18,72 @@ document.getElementById('dataForm').addEventListener('submit', function(event) {
         return; // Avbryt om värdet är utanför gränserna
     }
 
-    // Skapa en tom array för output
+    
+    var vete = {
+        ph: 5,
+        moisture: [30],
+        namn: "vete",
+        soilColor: "Ljusbrun"
+    }
+
+    var morot = {
+        ph: 5,
+        moisture: [30],
+        namn: "morot",
+        soilColor: "Ljusbrun"
+    }
+
+    var potatis = {
+        ph: 6,
+        moisture: [60, 65, 70, 75, 80],
+        namn: "potatis",
+        soilColor: "Ljusbrun"
+    }
+
+    var rodbeta = {
+        ph: 5,
+        moisture: [30],
+        namn: "rödbeta",
+        soilColor: "Svart"
+    }
+
+    var majs = {
+        ph: 5,
+        moisture: [35],
+        namn: "majs",
+        soilColor: "Ljusbrun"
+    }
+
+    var havre = {
+        ph: 6,
+        moisture: [30],
+        namn: "havre",
+        soilColor: "Ljusbrun"
+    }
+
     let output = [];
+    let grodor = [vete, morot, potatis, rodbeta, majs, havre];
+    grodor.forEach((element) => output.push(element.namn));
 
-    // Lägg till "morot" och "vete" om pH-värdet är mindre än 7, annars "potatis" och "rödbeta"
-    if (ph < 7) {
-        output.push("morot");
-        output.push("vete");
-    } else {
-        output.push("potatis");
-        output.push("rödbeta");
-    }
 
-    // testningar för mer specifika värden
-    if (ph < 5 && ph > 2) {
-        output.push("majs");
-    }
-    if (ph > 8 && ph < 11) {
-        output.push("havre");
-    }
+    for (let i = 0; i < grodor.length; i++) {
+        let y = 0;
+        if (grodor[i].ph !== ph) {
+            output = output.filter( item => item !== grodor[i].namn);
+        }
+        
+        while (y < grodor[i].length) {
+            if (grodor[i].moisture[y] !== moisture) {
+                output = output.filter( item => item !== grodor[i].namn);
+            }
+            y += 1
+        }
 
-    // Om fuktigheten är över 30 %, ta bort "morot" och "rödbeta" från arrayen
-    if (moisture > 30) {
-        output = output.filter(item => item !== "morot");
-        output = output.filter(item => item !== "rödbeta");
+        if (grodor[i].soilColor !== soilColor) {
+            output = output.filter( item => item !== grodor[i].namn);
+        }
     }
 
-    if (soilColor == "Svart") {
-        output = output.filter(item => item !== "rödbeta");
-    }
 
     // Visa resultatet på sidan
     const resultDiv = document.getElementById('result');
