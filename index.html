@@ -22,11 +22,11 @@
                 <span class="info-text">För att mäta din jordfuktighet behövs en fuktighets mätare, sedan stick ner den i din jord och skriv in procent enheten. Avrunda ditt resultat till närmsta 5% eller 10%</span>
             </span>
         </label>
-        <input type="number" id="moistureValue" name="moistureValue" required>
+        <input type="number" id="moistureValue" name="moistureValue" step="5" required>
         
         <label for="soilColor">Välj jordens färg:
             <span class="info">?
-                <span class="info-text">Om du är osäker på vilken färg din jord är, välj den färg som närmst liknar den du har.</span>
+                <span class="info-text">Om du är osäker på vilken färg din jord är välj den färg som närmst liknar den du har.</span>
             </span>
         </label>
         <select id="soilColor" name="soilColor">
@@ -34,6 +34,19 @@
             <option value="Brun"> Brun</option>
             <option value="Mörkbrun">Mörkbrun</option>
             <option value="Svart">Svart</option>
+        </select>
+        <label for="jordstruktur">Välj strukturen på din jord:
+            <span class="info">?
+                <span class="info-text">Du kan göra ett enkelt test för att ta reda på strukturen på din jord. Fukta lite jord och försök skapa en boll. Håller formen är det mer lera, om den smulas är det sand. Finns en smidig, formbar känsla betyder det silt.</span>
+            </span>
+        </label>
+        <select id="jordstruktur" name="jordstruktur">
+            <option value="Granulär">Granulär</option>
+            <option value="Krummig"> Krummig</option>
+            <option value="Lerig">Lerig</option>
+            <option value="Sandig">Sandig</option>
+            <option value="Torvig">Torvig</option>
+            <option value="Siltig">Siltig</option>
         </select>
         <br>
         <button type="submit">Kalkulera den mest optimala grödan för dig</button>
