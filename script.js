@@ -8,6 +8,8 @@ document.getElementById('dataForm').addEventListener('submit', function(event) {
     const jordstruktur = document.getElementById('jordstruktur').value;
 
 
+    // arvin bög
+
     // Validera pH-värdet (måste vara mellan 0 och 14)
     if (ph < 1 || ph > 14) {
         alert("pH-värdet måste vara mellan 1 och 14.");
