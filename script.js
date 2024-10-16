@@ -7,9 +7,6 @@ document.getElementById('dataForm').addEventListener('submit', function(event) {
     const soilColor = document.getElementById('soilColor').value; // Hämta det valda värdet från dropdown-listan
     const jordstruktur = document.getElementById('jordstruktur').value;
 
-
-    // arvin bög
-
     // Validera pH-värdet (måste vara mellan 0 och 14)
     if (ph < 1 || ph > 14) {
         alert("pH-värdet måste vara mellan 1 och 14.");
@@ -148,7 +145,7 @@ document.getElementById('dataForm').addEventListener('submit', function(event) {
     }
 
     var korn = {
-        ph: [6.0,6.5,7.5],
+        ph: [6.0,6.5,7,7.5],
         moisture: [50,55,60, 65, 70],
         namn: "korn",
         soilColor: ["Brun", "Mörkbrun"],
