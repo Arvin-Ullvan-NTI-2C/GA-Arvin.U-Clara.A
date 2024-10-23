@@ -12,7 +12,11 @@ body {
 }
 
 header { 
-
+    background: rgb(46, 204, 113);
+    display: flex;
+    align-items: center;
+    height: 90px;
+    justify-content: space-around;
 }
 
 footer {
@@ -34,9 +38,12 @@ footer {
 }
 
 
-section1 {
-
-
+#section1 {
+    grid-area: s01;
+    background-size: cover;
+    color: white;
+    justify-self: center;
+    align-self: center;
 }
 
 form {
@@ -92,6 +99,23 @@ input {
 .info:hover .info-text {
     display: block;
 }
+
+#gridwrapper_startsida {
+    margin: 15px;
+    padding: 10px;
+    box-sizing: border-box;
+    display: grid;
+    height: auto;
+    
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 200px 1070px;
+    column-gap: 0;
+    row-gap: 30px;
+    grid-template-areas: 
+    "s01"
+    ;
+}
+
 
 /* 
 - den perfekta blåa färgen #0a193a TILL TYP DETALJER 
