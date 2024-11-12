@@ -7,7 +7,7 @@ document.getElementById('dataForm').addEventListener('submit', function(event) {
     const soilColor = document.getElementById('soilColor').value; // Hämta det valda värdet från dropdown-listan
     const jordstruktur = document.getElementById('jordstruktur').value;
 
-    // Validera pH-värdet (måste vara mellan 0 och 14)
+    // Validera pH-värdet (måste vara mellan 1 och 14)
     if (ph < 1 || ph > 14) {
         alert("pH-värdet måste vara mellan 1 och 14.");
         return; // Avbryt om värdet är utanför gränserna
