@@ -7,45 +7,73 @@
 body {
     font-family: Arial, sans-serif;
     color: #fbfbfb;
-    margin: 20px;
     background-color: #102f32;
 }
 
-header { 
-    background: rgb(46, 204, 113);
+header {
+    background-color: rgba(16, 47, 50, 0.9);
+    font: #fbfbfb;
     display: flex;
     align-items: center;
-    height: 90px;
+    height: 6rem;
     justify-content: space-around;
+    position: sticky;
+    top: 0;
 }
 
-footer {
-    grid-area: foo;
-    background-color: rgb(114, 99, 92);
-    height: auto;
-}
-
-/* texten i footern*/
-.kontakta-oss {
-    color: rgb(255, 255, 255);
-    padding: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    flex-direction: column;
-    background-color: rgb(114, 99, 92);
-}
-
-
+/* Själva kalkylatorn */
 #section1 {
     grid-area: s01;
     background-size: cover;
     color: white;
     justify-self: center;
     align-self: center;
+    padding-top: 1rem;
+    padding-bottom: 5rem;
 }
 
+/* texten ovanför calc */
+#section2 {
+    grid-area: s02;
+    background-size: auto;
+    color: white;
+    justify-self: center;
+    align-self: center;
+    align-items: center;
+    text-align: left;
+    padding-left: 24rem;
+    padding-right: 20rem;
+    padding-bottom: 4rem;
+    padding-top: 4rem;
+}
+
+footer {
+    background-color: rgb(83, 77, 73);
+    height: auto;
+    color: rgb(255, 255, 255); 
+    padding: 1.25rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    flex-direction: row;
+    position: relative;
+}
+
+
+/* texten i footern*/
+.kontakt_info,
+.sociala_medier_lankar,
+.center_footer  {
+text-align: center;
+
+}
+
+
+    
+
+
+/*KALKYLATOR NEDAN*/
 form {
     margin-bottom: 20px;
 }
@@ -100,27 +128,80 @@ input {
     display: block;
 }
 
+/*KALKYLATOR OVAN*/
+
+/* GRIDWRAPPERS */
+
 #gridwrapper_startsida {
     margin: 15px;
     padding: 10px;
     box-sizing: border-box;
     display: grid;
     height: auto;
-    
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 200px 1070px;
+    grid-template-columns: 7rem 1fr 1fr auto;
+    grid-template-rows: 1fr;
     column-gap: 0;
-    row-gap: 30px;
+    row-gap: 0;
     grid-template-areas: 
-    "s01"
-    ;
+
+    "s02"
+    "s01";
+}
+
+
+/* LISTOR */
+
+#ul1  {
+    display: flex;
+    justify-content: space-evenly;
+    list-style: none;
+    width: 1230px;
+    align-items: center;
+    flex-basis: auto;
+    text-align: justify;
+}
+
+/* FONTS */
+@font-face {
+    font-family: Raleway-Light;
+    src: url(../fonts/Raleway-Light.ttf);
+}
+
+@font-face {
+    font-family: Raleway-Medium;
+    src: url(../fonts/Raleway-Medium.ttf);
+}
+
+@font-face {
+    font-family: ReemKufiFun;
+    src: url(../fonts/ReemKufiFun-Regular.ttf);
+}
+
+
+/* TEXTFORMAT */
+a {
+    text-decoration: none;
+    font-size: 2rem;
+    color: white;
+}
+
+
+/* .KLASSER */
+
+.logga {
+    width: 20rem;
+    margin: 0.6rem;
+}
+
+.sociala_medier {
+    width: 65px;
+    margin-left: 17px;
+    margin-right: 17px;
 }
 
 
 /* 
 - den perfekta blåa färgen #0a193a TILL TYP DETALJER 
 - en fin beige/brun/lila färg #c7aca5
-
-
 */
 
