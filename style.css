@@ -7,9 +7,9 @@
 body {
     font-family: Arial, sans-serif;
     color: #fbfbfb;
-    background-color: #102f32;
-    height: 100vh;
-    width: 100vw
+    background-color: rgb(16, 47, 50);
+    /* height: 100vh;
+    width: 100vw */
 
 }
 
@@ -27,6 +27,7 @@ header {
 
 /* Själva kalkylatorn */
 #section1 {
+    background-color: transparent;
     grid-area: s01;
     background-size: cover;
     color: white;
@@ -47,15 +48,15 @@ header {
     align-items: center;
     text-align: left;
     /* 24rem, 20rem, 4rem, 4rem */
-    padding-left: 30vw;
-    padding-right: 25vw;
+    padding-left: 10vw;
+    padding-right: 10vw;
     padding-bottom: 5vh;
     padding-top: 5vh;
 }
 
 footer {
     background-color: rgb(83, 77, 73);
-    height: auto;
+    height: 40vh;
     color: rgb(255, 255, 255); 
     /* 2.5rem */
     padding: 1.75vw;
@@ -162,7 +163,7 @@ input {
     display: flex;
     justify-content: space-evenly;
     list-style: none;
-    width: 1230px;
+    width: 90vw;
     align-items: center;
     flex-basis: auto;
     text-align: justify;
@@ -211,5 +212,3 @@ a {
 - den perfekta blåa färgen #0a193a TILL TYP DETALJER 
 - en fin beige/brun/lila färg #c7aca5
 */
-
-/* hfhghgfthfhgfuygjygjhgjygj */
