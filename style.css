@@ -8,6 +8,9 @@ body {
     font-family: Arial, sans-serif;
     color: #fbfbfb;
     background-color: #102f32;
+    height: 100vh;
+    width: 100vw
+
 }
 
 header {
@@ -15,7 +18,8 @@ header {
     font: #fbfbfb;
     display: flex;
     align-items: center;
-    height: 6rem;
+    /* 6rem */
+    height: 7vw; 
     justify-content: space-around;
     position: sticky;
     top: 0;
@@ -28,8 +32,9 @@ header {
     color: white;
     justify-self: center;
     align-self: center;
-    padding-top: 1rem;
-    padding-bottom: 5rem;
+    /* 1rem,5rem */
+    padding-top: 1.25vh;
+    padding-bottom: 6.35vh;
 }
 
 /* texten ovanför calc */
@@ -41,17 +46,19 @@ header {
     align-self: center;
     align-items: center;
     text-align: left;
-    padding-left: 24rem;
-    padding-right: 20rem;
-    padding-bottom: 4rem;
-    padding-top: 4rem;
+    /* 24rem, 20rem, 4rem, 4rem */
+    padding-left: 30vw;
+    padding-right: 25vw;
+    padding-bottom: 5vh;
+    padding-top: 5vh;
 }
 
 footer {
     background-color: rgb(83, 77, 73);
     height: auto;
     color: rgb(255, 255, 255); 
-    padding: 1.25rem;
+    /* 2.5rem */
+    padding: 1.75vw;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -189,14 +196,14 @@ a {
 /* .KLASSER */
 
 .logga {
-    width: 20rem;
+    width: 16.6vw;
     margin: 0.6rem;
 }
 
 .sociala_medier {
-    width: 65px;
-    margin-left: 17px;
-    margin-right: 17px;
+    width: 3.8vw;
+    margin-left: 0;
+    margin-right: 0;
 }
 
 
