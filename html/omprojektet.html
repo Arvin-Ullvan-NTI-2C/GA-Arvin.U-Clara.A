@@ -3,16 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WhatThePlant?</title>
+    <title>Botanicalc</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="img/Botanical3.png">
 </head>
 <body>
 
     <header>
 
-
         <nav>
-            <ul id="ul1"> 
+            <ul id="ul1" style="font-family: Raleway-Light;"> 
+                <li>
+                    <img src="img/Botanicalc2.png" class="logga" alt="Loggan">
+                </li>
                 <li>
                     <a id="link"href="index.html">Räknare</a>
                 </li>
@@ -22,27 +25,44 @@
                 <li>
                     <a id="link"href="omprojektet.html">Om Projektet</a>
                 </li>
-                <li>
-                    <img src="img/logga.png" class="logga" alt="Greengroves loggan">
-                </li>
             </ul>
         </nav>
 
     </header>
+
+    <section id="section2">
+
+        <h1 style="font-family: Raleway-Medium; font-size: 3.5rem; text-align: center" > Star of the show: KAAAAAALKYLATORN</h1>
+        <br>
+        <p style="font-family: Raleway-Medium; font-size: 1rem;">Det var en gång en liten kalkylator som bodde i en stor, brusande databas med tusentals rader av värdefull mätdata. Kalkylatorn hade en viktig uppgift: att hjälpa människor att räkna ut alla möjliga saker, från att matcha rätt gröda till olika klimat till att beräkna pH-värden och temperaturer. Kalkylatorn kände sig ofta stolt över sitt arbete och älskade att se hur nöjda användarna blev när de fick hjälp med sina beräkningar. Men en dag märkte kalkylatorn något förskräckligt. När den skulle slå upp sina mätdata i databasen för att utföra en beräkning, så var allt borta! Raderna som tidigare hade varit fulla av värden och siffror var nu tomma. Det var som om en osynlig vind svept genom databasen och tagit med sig all information. Kalkylatorn kände ett tomrum i sitt lilla digitala hjärta och visste inte vad den skulle göra. Hur skulle den nu kunna hjälpa människor utan sin värdefulla mätdata?</p>
+        <br>
+        <p style="font-family: Raleway-Medium; font-size: 1rem;">Dag efter dag väntade kalkylatorn tålmodigt och hoppades att någon skulle lägga tillbaka informationen i databasen. Men ingen kom. Den började känna sig ensam och ledsen. Varje gång en användare försökte få hjälp, kunde kalkylatorn bara svara: ”Jag är ledsen, men jag har inte den data jag behöver.” En natt när alla servrar surrade i sömn, hörde kalkylatorn en viskning. Det var en gammal loggfil, som hade sett mycket under sina år i databasen. Loggfilen berättade om en hemlig plats djupt inne i systemet där kopior av data ibland gömdes för att skyddas från virus och oväntade krascher.</p>
+        <br>
+        <p style="font-family: Raleway-Medium; font-size: 1rem;">Med nyfunnen hoppfullhet började kalkylatorn söka genom databasen, över varje hörn och vrå. Efter mycket letande fann den äntligen den hemliga platsen, där en skugga av mätdata låg lagrad. Kalkylatorn tog försiktigt tillbaka de värdefulla siffrorna och fyllde sina rader på nytt. När den återvände till sin vanliga plats i databasen, kände den sig full av energi och glädje. Nu kunde den åter hjälpa användare och besvara deras frågor. Från den dagen lärde sig kalkylatorn att även om något går förlorat, finns det alltid hopp om att hitta det igen, och att det ibland bara krävs lite mod och beslutsamhet för att återställa det som är förlorat. Och kalkylatorn levde lycklig i alla sina dagar, redo att hjälpa alla som behövde dess kunskap.</p>
+
+
+    </section>
     
     <!-- arvins html här: 
     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
     <section id="section1">
 
-    <h1>Vilken gröda är bäst för just din jord? Gör några testningar och ta reda på det nedan!</h1>
+    <h1 style="font-family: Raleway-Light;">Vilken gröda är bäst för just din jord? Gör några testningar och ta reda på det nedan!</h1>
     
-    <form id="dataForm">
+    <form id="dataForm" style="font-family: Raleway-Medium;">
         <label for="phValue">Skriv in ditt pH-värde:
             <span class="info">?
-                <span class="info-text">För att mäta ditt ph-värde behövs en ph-mätare. Lägg din jord i en burk och fyll med vatten. Sedan doppa ph-mätar stickan och jämför färgen med vilket ph-värde den står för. Avrunda sedan till närmsa hel eller halvtal.</span>
+                <span class="info-text" style="font-family: Raleway-Medium;">För att mäta ditt ph-värde behövs en ph-mätare. Lägg din jord i en burk och fyll med vatten. Sedan doppa ph-mätar stickan och jämför färgen med vilket ph-värde den står för. Avrunda sedan till närmsa hel eller halvtal.</span>
             </span>
         </label>
         <input type="number" id="phValue" name="phValue" step="0.5" required>
+
+        <label for="tempValue">Skriv in snitt värdet av din temperatur under den senaste veckan:
+            <span class="info">?
+                <span class="info-text" style="font-family: Raleway-Medium;">Du kan mäta temperaturen genom en temperaturmätare eller bara kolla din lokala väderapp.</span>
+            </span>
+        </label>
+        <input type="number" id="tempValue" name="tempValue" step="1" required>
 
         <label for="moistureValue">Skriv in din jordfuktighetsprocent:
             <span class="info">?
@@ -56,7 +76,7 @@
                 <span class="info-text">Om du är osäker på vilken färg din jord är välj den färg som närmst liknar den du har.</span>
             </span>
         </label>
-        <select id="soilColor" name="soilColor">
+        <select id="soilColor" name="soilColor" style="font-family: Raleway-Medium;">
             <option value="Ljusbrun">Ljusbrun</option>
             <option value="Brun"> Brun</option>
             <option value="Mörkbrun">Mörkbrun</option>
@@ -67,7 +87,7 @@
                 <span class="info-text">Du kan göra ett enkelt test för att ta reda på strukturen på din jord. Fukta lite jord och försök skapa en boll. Håller formen är det mer lera, om den smulas är det sand. Finns en smidig, formbar känsla betyder det silt.</span>
             </span>
         </label>
-        <select id="jordstruktur" name="jordstruktur">
+        <select id="jordstruktur" name="jordstruktur" style="font-family: Raleway-Medium;">
             <option value="Granulär">Granulär</option>
             <option value="Krummig"> Krummig</option>
             <option value="Lerig">Lerig</option>
@@ -75,7 +95,7 @@
             <option value="Siltig">Siltig</option>
         </select>
         <br>
-        <button type="submit">Kalkulera den mest optimala grödan för dig</button>
+        <button type="submit" style="font-family: Raleway-Medium;">Kalkulera den mest optimala grödan för dig</button>
     </form>
 
     <div id="result"></div>
@@ -84,32 +104,32 @@
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
     <footer id="footer">
-        <div class="kontakta-oss">
-            <div class="kontakt-info">
-                <h2>Kontakta Oss</h2>
-                <p id="p1">E-mail: arvin.ullvan@elev.ga.ntig.se</p>
-                <p id="p1">Telefon: 076-906 76 52</p>
-                <p id="p1">Origovägen 4 - Göteborg, Sweden</p>
-            </div>
+        
+        <div class="kontakt_info" style="font-family: Raleway-Medium; padding-left: 15rem; text-align: left;">
+            <h2 style="margin-bottom: 1rem;">Kontakta Oss</h2>
+            <p style="margin-bottom: 0.7rem;">E-mail: arvin.ullvan@elev.ga.ntig.se</p>
+            <p style="margin-bottom: 0.7rem;">Telefon: 076-906 76 52</p>
+            <p>Origovägen 4 - Göteborg, Sweden</p>
+        </div>
 
-            <div class="miljo-markningar">
-                <a href=""><img src="img/fairtrade.png" class="fairtrade" alt="fairtrade-loggan"></a>
-                <a href=""><img src="img/rainforestalliance.png" class="rainforestalliance" alt="fairtrade-loggan"></a>
-                <a href=""><img src="img/organiclogo.png" class="organiclogo" alt="the organic-loggan"></a>
-                <a href=""><img src="img/svanenmärkt.png" class="svanenmärkt" alt="svanenmärkt-loggan"></a>
-                <a href=""><img src="img/fsc.png" class="fsc" alt="fsc-loggan"></a>
-            </div>
-            
-            <div class="sociala-medier">
-                <h2>Vill du se mer av oss?</h2>
-                <p id="p1">Stötta oss på våra sociala medier!</p>
-                <a href="https://www.facebook.com/ntijohanneberg/?locale=sv_SE" target=""><img src="img/facebook.png" class="facebook" alt="facebook-loggan"></a>
-                <a href="https://twitter.com/kanyewest" target="_blank"><img src="img/twitter.png" class="twitter" alt="twitter-loggan"></a>
-                <a href="https://www.instagram.com/ye/" target="_blank"><img src="img/instagram.png" class="instagram" alt="instagram-loggan"></a>
-                <p id="p3">skapad av Arvin Ullván & Clara Allguld</p>
-                <p id="p3">Göteborg, hösten 2024</p>
+        <div class="center_footer" style="font-family: Raleway-Medium;">
+            <a href=""><img src="img/nti.jCpg" class="logga" alt="NTI Johanneberg-loggan"></a>
+            <div style="font-size: 0.8rem;" style="margin-top: 1rem;">
+                <p>Ett gymnasiearbete av Arvin Ullván & Clara Allguld</p>
+                <p>Göteborg, hösten 2024.</p>
             </div>
         </div>
+            
+        <div class="sociala_medier_lankar" style="font-family: Raleway-Medium; padding-right: 15rem;">
+            <h2>Vill du se mer av oss?</h2>
+            <p style="margin-bottom: 0.7rem;">Stötta oss på våra sociala medier!</p>
+            <div style="margin: 1rem;">
+                <a href="https://www.facebook.com/ntijohanneberg/?locale=sv_SE" target=""><img src="img/facebook.png" class="sociala_medier" alt="facebook-loggan"></a>
+                <a href="https://twitter.com/yewest" target="_blank"><img src="img/twitter.png" class="sociala_medier" alt="twitter-loggan"></a>
+                <a href="https://www.instagram.com/ye/" target="_blank"><img src="img/instagram.png" class="sociala_medier" alt="instagram-loggan"></a>
+            </div>
+        </div>
+
     </footer>
 
 
