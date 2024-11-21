@@ -112,7 +112,7 @@ input {
     font-weight: bold;
     border: 1px solid #fbfbfb;
     border-radius: 50%;
-    padding: 2px 5px;
+    padding: 2px 8px;
     margin-left: 5px;
     color: #fbfbfb;
 }
@@ -207,6 +207,9 @@ a {
     margin-right: 0;
 }
 
+/* .sociala_medier_lankar {
+    
+} */
 
 /* 
 - den perfekta blåa färgen #0a193a TILL TYP DETALJER 
