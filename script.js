@@ -26,76 +26,76 @@ document.getElementById('dataForm').addEventListener('submit', function(event) {
         temp: [12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25],
         namn: "vete",
         soilColor: ["Brun", "Mörkbrun"],
-        jordstruktur: ["Granulär", "Krummig"]
+        jordstruktur: ["Loam", "Sandig", "Silt"]
 
     }
 
     var rag = {
-        ph: [5.5,6.0,6.5,7.0],
+        ph: [5.0,5.5,6.0,6.5,7.0],
         moisture: [50, 55, 60, 65, 70],
         temp: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
         namn: "råg",
         soilColor: ["Brun", "Mörkbrun"],
-        jordstruktur: ["Granulär", "Krummig"]
+        jordstruktur: ["Loam", "Lerig"]
     }
 
     var majs = {
-        ph: [6.0,6.5,7.0],
+        ph: [5.5,6.0,6.5,7.0],
         moisture: [60, 65, 70, 75, 80],
-        temp: [50],
+        temp: [10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25],
         namn: "majs",
         soilColor: ["Brun", "Mörkbrun"],
-        jordstruktur: ["Granulär", "Krummig"]
+        jordstruktur: ["Loam", "Sandig","Lerig"]
 
     }
 
     var bonor = {
-        ph: [6.0,6.5,7.0,7.5],
+        ph: [6.0,6.5,7.0,7],
         moisture: [50,55,60,65,70],
-        temp: [50],
+        temp: [18,19,20,21,22,23,24,25,26,27,28,29,30],
         namn: "bönor",
         soilColor: ["Brun", "Mörkbrun"],
-        jordstruktur: ["Granulär", "Krummig"]
+        jordstruktur: ["Loam","Lerig","Silt"]
 
     }
 
     var karlselleri = {
-        ph: [6.0,6.5,7.0],
+        ph: [6.5,7.0,7.5],
         moisture: [60,65,70,75,80],
-        temp: [50],
+        temp: [16,17,18,19,20,21],
         namn: "kärlselleri",
         soilColor: ["Mörkbrun", "Svart"],
-        jordstruktur: ["Lerig"]
+        jordstruktur: ["Loam","Sandig","Silt"]
 
     }
 
     var morot = {
         ph: [6.0,6.5,7.0],
         moisture: [50,55,60,65,70],
-        temp: [50],
+        temp: [13,14,15,16,17,18,19,20,21],
         namn: "morot",
         soilColor: ["Ljusbrun", "Brun"],
-        jordstruktur: ["Sandig", "Siltig"]
+        jordstruktur: ["Sandig"]
 
     }
 
     var potatis = {
-        ph: [5.5,6,6.5],
+        ph: [6.0,6.5,7.0],
         moisture: [60, 65, 70, 75, 80],
-        temp: [50],
+        temp: [16,17,18,19],
         namn: "potatis",
         soilColor: ["Ljusbrun", "Brun"],
-        jordstruktur: ["Sandig", "Lerig"]
+        jordstruktur: ["Sandig", "Silt"]
 
     }
 
     var kal = {
-        ph: [6.0,6.5,7.0,7.5],
+        ph: [6.0,6.5,7.0],
         moisture: [50,55,60,65,70],
-        temp: [50],
+        temp: [12,13,14,15,16,17,18,19,20,21,22,23],
         namn: "kål",
         soilColor: ["Brun", "Mörkbrun"],
-        jordstruktur: ["Granulär", "Krummig"]
+        jordstruktur: ["Loam"]
 
     }
 
