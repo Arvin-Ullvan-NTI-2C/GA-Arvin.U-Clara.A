@@ -25,6 +25,7 @@ header {
     top: 0;
 }
 
+/* STARTSIDANS SECTIONS */
 /* Själva kalkylatorn */
 #section1 {
     background-color: transparent;
@@ -53,6 +54,40 @@ header {
     padding-bottom: 5vh;
     padding-top: 5vh;
 }
+
+/* TUTORIAL SECTIONS */
+
+#section3 {
+    grid-area: s03;
+    background-size: auto;
+    color: white;
+    justify-self: center;
+    align-self: center;
+    align-items: center;
+    text-align: left;
+    /* 24rem, 20rem, 4rem, 4rem */
+    padding-left: 10vw;
+    padding-right: 10vw;
+    padding-bottom: 5vh;
+    padding-top: 5vh;
+}
+
+#tutorial1 {
+    grid-area: t01;
+    background-size: auto;
+    width: 60rem;
+    color: white;
+    justify-self: center;
+    align-self: center;
+    align-items: center;
+    text-align: left;
+    /* 24rem, 20rem, 4rem, 4rem */
+    padding-left: 10vw;
+    padding-right: 10vw;
+    padding-bottom: 5vh;
+    padding-top: 5vh;
+}
+
 
 footer {
     background-color: rgb(83, 77, 73);
@@ -146,8 +181,8 @@ input {
     box-sizing: border-box;
     display: grid;
     height: auto;
-    grid-template-columns: 7rem 1fr 1fr auto;
-    grid-template-rows: 1fr;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
     column-gap: 0;
     row-gap: 0;
     grid-template-areas: 
@@ -155,6 +190,23 @@ input {
     "s02"
     "s01";
 }
+
+#gridwrapper_tutorial {
+    margin: 15px;
+    padding: 10px;
+    box-sizing: border-box;
+    display: grid;
+    height: auto;
+    grid-template-columns: auto, 1fr;
+    grid-template-rows: auto;
+    column-gap: 0;
+    row-gap: 0;
+    grid-template-areas: 
+
+    "s03"
+    "t01";
+}
+
 
 
 /* LISTOR */
