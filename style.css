@@ -72,8 +72,12 @@ header {
     padding-top: 5vh;
 }
 
-#tutorial1 {
-    grid-area: t01;
+#tutorial1,
+#tutorial2,
+#tutorial3,
+#tutorial4,
+#tutorial5
+ {
     background-size: auto;
     width: 60rem;
     color: white;
@@ -86,6 +90,25 @@ header {
     padding-right: 10vw;
     padding-bottom: 5vh;
     padding-top: 5vh;
+}
+
+#tutorial1{
+    grid-area: t01;
+}
+
+#tutorial2{
+    grid-area: t02;
+}
+#tutorial3{
+    grid-area: t03;
+}
+
+#tutorial4{
+    grid-area: t04;
+}
+
+#tutorial5{
+    grid-area: t05;
 }
 
 
@@ -204,7 +227,11 @@ input {
     grid-template-areas: 
 
     "s03"
-    "t01";
+    "t01"
+    "t02"
+    "t03"
+    "t04"
+    "t05";
 }
 
 
