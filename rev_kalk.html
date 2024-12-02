@@ -33,7 +33,7 @@
 
     </header>
 
-    <section id="section2">
+    <section id="section3">
 
         <h1 style="font-family: Raleway-Medium; font-size: 3.5rem; text-align: center" > Star of the show: KAAAAAALKYLATORN</h1>
         <br>
@@ -52,56 +52,36 @@
 
     <h1 style="font-family: Raleway-Light;">Vilken gröda är bäst för just din jord? Gör några testningar och ta reda på det nedan!</h1>
     
-    <form id="dataForm" style="font-family: Raleway-Medium;">
-        <label for="phValue">Skriv in ditt pH-värde:
-            <span class="info">?
-                <span class="info-text" style="font-family: Raleway-Medium;">För att mäta ditt ph-värde behövs en ph-mätare. Lägg din jord i en burk och fyll med vatten. Sedan doppa ph-mätar stickan och jämför färgen med vilket ph-värde den står för. Avrunda sedan till närmsa hel eller halvtal.</span>
-            </span>
-        </label>
-        <input type="number" id="phValue" name="phValue" step="0.5" required>
-
-        <label for="tempValue">Skriv in snitt värdet av din temperatur under den senaste veckan:
-            <span class="info">?
-                <span class="info-text" style="font-family: Raleway-Medium;">Du kan mäta temperaturen genom en temperaturmätare eller bara kolla din lokala väderapp.</span>
-            </span>
-        </label>
-        <input type="number" id="tempValue" name="tempValue" step="1" required>
-
-        <label for="moistureValue">Skriv in din jordfuktighetsprocent:
-            <span class="info">?
-                <span class="info-text">För att mäta din jordfuktighet behövs en fuktighets mätare, sedan stick ner den i din jord och skriv in procent enheten. Avrunda ditt resultat till närmsta 5% eller 10%</span>
-            </span>
-        </label>
-        <input type="number" id="moistureValue" name="moistureValue" step="5" required>
+    <form id="dataForm2" style="font-family: Raleway-Medium;">
         
-        <label for="soilColor">Välj jordens färg:
+        
+        <label for="groda">Välj grödan du vill kolla på:
             <span class="info">?
                 <span class="info-text">Om du är osäker på vilken färg din jord är välj den färg som närmst liknar den du har.</span>
             </span>
         </label>
-        <select id="soilColor" name="soilColor" style="font-family: Raleway-Medium;">
-            <option value="Ljusbrun">Ljusbrun</option>
-            <option value="Brun"> Brun</option>
-            <option value="Mörkbrun">Mörkbrun</option>
-            <option value="Svart">Svart</option>
+        <select id="groda" name="groda" style="font-family: Raleway-Medium;">
+            <option value="Vete">Vete</option>
+            <option value="Råg"> Råg</option>
+            <option value="Majs">Majs</option>
+            <option value="Bönor">Bönor</option>
+            <option value="Kärlselleri">Kärlselleri</option>
+            <option value="Morot">Morot</option>
+            <option value="Potatis">Potatis</option>
+            <option value="Kål">Kål</option>
+            <option value="Tomater">Tomater</option>
+            <option value="Raps">Raps</option>
+            <option value="Sockerbeta">Sockerbeta</option>
+            <option value="Havre">Havre</option>
+            <option value="Korn">Korn</option>
+            <option value="Sallad">Sallad</option>
+            <option value="Zucchini">Zucchini</option>
+            <option value="Kryddor (tex. basilika, persilja)">Kryddor (tex. basilika, persilja)</option>
         </select>
-        <label for="jordstruktur">Välj strukturen på din jord:
-            <span class="info">?
-                <span class="info-text">Du kan göra ett enkelt test för att ta reda på strukturen på din jord. Fukta lite jord och försök skapa en boll. Håller formen är det mer lera, om den smulas är det sand. Finns en smidig, formbar känsla betyder det silt.</span>
-            </span>
-        </label>
-        <select id="jordstruktur" name="jordstruktur" style="font-family: Raleway-Medium;">
-            <option value="Granulär">Granulär</option>
-            <option value="Krummig"> Krummig</option>
-            <option value="Lerig">Lerig</option>
-            <option value="Sandig">Sandig</option>
-            <option value="Siltig">Siltig</option>
-        </select>
-        <br>
         <button type="submit" style="font-family: Raleway-Medium;">Kalkulera den mest optimala grödan för dig</button>
     </form>
 
-    <div id="result"></div>
+    <div id="result2"></div>
 
     </section>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -116,7 +96,7 @@
         </div>
 
         <div class="center_footer" style="font-family: Raleway-Medium;">
-            <a href=""><img src="img/nti.jCpg" class="logga" alt="NTI Johanneberg-loggan"></a>
+            <a href=""><img src="img/nti.jpg" class="logga" alt="NTI Johanneberg-loggan"></a>
             <div style="font-size: 0.8rem;" style="margin-top: 1rem;">
                 <p>Ett gymnasiearbete av Arvin Ullván & Clara Allguld</p>
                 <p>Göteborg, hösten 2024.</p>
