@@ -21,6 +21,7 @@ header {
     /* 6rem */
     height: 7vw; 
     justify-content: space-around;
+
     position: sticky;
     top: 0;
 }
@@ -30,6 +31,19 @@ header {
 #section1 {
     background-color: transparent;
     grid-area: s01;
+    background-size: cover;
+    color: white;
+    justify-self: center;
+    align-self: center;
+    /* 1rem,5rem */
+    padding-top: 1.25vh;
+    padding-bottom: 6.35vh;
+}
+
+/* REVERSE KALKYLATORN */
+#section4 {
+    background-color: transparent;
+    grid-area: s04;
     background-size: cover;
     color: white;
     justify-self: center;
@@ -60,6 +74,7 @@ header {
 #section3 {
     grid-area: s03;
     background-size: auto;
+    max-width: 77vw;
     color: white;
     justify-self: center;
     align-self: center;
@@ -71,15 +86,63 @@ header {
     padding-bottom: 5vh;
     padding-top: 5vh;
 }
+
+html {
+    scroll-behavior: smooth;
+}
+
+   /* SIDEBAR */
+
+.sidenav {
+    /* height: 100%; Full-height: remove this if you want "auto" height  */
+    /* Set the width of the sidebar */
+    position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+    z-index: 1; /* Stay on top */
+    /* top: 1; 0 =Stay at the top */
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding: 3rem;
+    border-right: 1px solid white;
+    width: 20%;
+    grid-area: snv; 
+  }
+
+  /* https://www.w3schools.com/howto/howto_css_fixed_sidebar.asp */
+  
+  /* The navigation menu links */
+  .sidenav a {
+    padding: 1vh 1vh 1vh 1vh;
+    text-decoration: none;
+    font-size: 2rem;
+    color: white;
+    display: block;
+  }
+  
+  /* When you mouse over the navigation links, change their color */
+  .sidenav a:hover {
+    color: rgb(153, 142, 77);
+  }
+  
+  /* Style page content */
+  /* .main {
+    margin-left: 160px; Same as the width of the sidebar 
+    padding: 0px 10px;
+  /* } */
+
+  /* On smaller screens, where height is less than 450px, change the style of the sidebar (less padding and a smaller font size) */
+  /* @media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+  } */
 
 #tutorial1,
 #tutorial2,
 #tutorial3,
 #tutorial4,
-#tutorial5
- {
+#tutorial5 {
     background-size: auto;
-    width: 60rem;
+    width: 70rem;
     color: white;
     justify-self: center;
     align-self: center;
@@ -92,22 +155,22 @@ header {
     padding-top: 5vh;
 }
 
-#tutorial1{
+#tutorial1 {
     grid-area: t01;
 }
 
-#tutorial2{
+#tutorial2 {
     grid-area: t02;
 }
-#tutorial3{
+#tutorial3 {
     grid-area: t03;
 }
 
-#tutorial4{
+#tutorial4 {
     grid-area: t04;
 }
 
-#tutorial5{
+#tutorial5 {
     grid-area: t05;
 }
 
@@ -124,6 +187,7 @@ footer {
     text-align: center;
     flex-direction: row;
     position: relative;
+    z-index: 1000
 }
 
 
@@ -163,6 +227,14 @@ input {
     margin-top: 10px;
 }
 
+#result2 {
+    font-family: Raleway-Light;
+    font-weight: bold;
+    margin-top: 3vh;
+    font-size: 1.5rem;
+
+}
+
 .info {
     display: inline-block;
     position: relative;
@@ -187,7 +259,7 @@ input {
     border-radius: 5px;
     width: 200px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-    z-index: 1000;
+    z-index: 30;
 }
 
 .info:hover .info-text {
@@ -211,7 +283,9 @@ input {
     grid-template-areas: 
 
     "s02"
-    "s01";
+    "s01"
+    /* "s04" */
+    ;
 }
 
 #gridwrapper_tutorial {
@@ -221,17 +295,17 @@ input {
     display: grid;
     height: auto;
     grid-template-columns: auto, 1fr;
-    grid-template-rows: auto;
+    grid-template-rows: 40vw, auto;
     column-gap: 0;
     row-gap: 0;
     grid-template-areas: 
 
-    "s03"
-    "t01"
-    "t02"
-    "t03"
-    "t04"
-    "t05";
+    "snv, s03"
+    "snv, t01"
+    "snv, t02"
+    "snv, t03"
+    "snv, t04"
+    "snv, t05";
 }
 
 
@@ -278,6 +352,7 @@ a {
 .logga {
     width: 16.6vw;
     margin: 0.6rem;
+    left: 0;
 }
 
 .sociala_medier {
