@@ -9,13 +9,18 @@ if (window.location.pathname === '/index.html') {
         // const soilColor = document.getElementById('soilColor').value; 
         const jordstruktur = document.getElementById('jordstruktur').value;
 
-        // Validera pH-värdet (måste vara mellan 1 och 14)
+        
         if (ph < 1 || ph > 14) {
             alert("pH-värdet måste vara mellan 1 och 14.");
-            return; // Avbryt om värdet är utanför gränserna
+            return; 
         }
 
-        // Validera fuktighetsprocenten (måste vara mellan 0 och 100)
+        if (temp < -20 || temp > 40) {
+            alert("Ingen planta kan växa i denna temperatur, dubbelkolla så att det stämmer!");
+            return;
+        }
+
+       
         // if (moisture < 0 || moisture > 100) {
         //     alert("Fuktighetsprocenten måste vara mellan 0 och 100.");
         //     return; // Avbryt om värdet är utanför gränserna
@@ -156,6 +161,13 @@ if (window.location.pathname === '/index.html') {
         grodor.forEach((element) => output.push(element.namn));
 
 
+        let ph_small_count = 0
+        let ph_large_count = 0
+        let temp_small_count = 0
+        let temp_large_count = 0
+        let jord_count = 0
+        let removed = 0
+
         for (let i = 0; i < grodor.length; i++) {
             
             y = 0
@@ -166,11 +178,29 @@ if (window.location.pathname === '/index.html') {
                 counter += 1
                 }
 
+                if (ph >= grodor[i].ph[y]) {
+                    ph_small = false
+                    ph_small_count = 1
+                }
+                if (ph <= grodor[i].ph[y]){
+                    ph_large = false 
+                    ph_large_count = 1
+                }
                 if (counter == grodor[i].ph.length){
                     output = output.filter( item => item !== grodor[i].namn);
+                    removed += 1
                 }
                 y += 1
             }
+            
+            if (ph_small_count == 0) {
+                ph_small = true
+            }
+
+            if (ph_large_count == 0) {
+                ph_large = true
+            }
+
 
             y = 0
             counter = 0
@@ -180,10 +210,28 @@ if (window.location.pathname === '/index.html') {
                 counter += 1
                 }
 
+                if (temp >= grodor[i].temp[y]) {
+                    temp_small = false
+                    temp_small_count = 1
+                }
+                if (temp <= grodor[i].temp[y]){
+                    temp_large = false 
+                    temp_large_count = 1
+                }
+
                 if (counter == grodor[i].temp.length){
                     output = output.filter( item => item !== grodor[i].namn);
+                    removed += 1
                 }
                 y += 1
+            }
+
+            if (temp_small_count == 0) {
+                temp_small = true
+            }
+
+            if (temp_large_count == 0) {
+                temp_large = true
             }
 
             // y = 0
@@ -219,36 +267,65 @@ if (window.location.pathname === '/index.html') {
             
             while (y < grodor[i].jordstruktur.length) {
                 if (grodor[i].jordstruktur[y] !== jordstruktur) {
-                counter += 1
+                    counter += 1
                 }
 
                 if (counter == grodor[i].jordstruktur.length){
                     output = output.filter( item => item !== grodor[i].namn);
+                    jord_count += 1
                 }
                 y += 1
             }
+
+           if (jord_count > (grodor.length - removed)) {
+                jord_problem = true;
+           }
+            
+            
         }
 
 
-        // Visa resultatet på sidan
         const resultDiv = document.getElementById('result');
 
         if (output.length > 0)
     
             resultDiv.textContent = "Din mest optimala gröda är: " + output.join(", ") + ". Lyckligt Odlande!";
-        else 
-            resultDiv.textContent = "Du har ingen gröda som passar din jord till det bästa, gå flrst till vår sida 'Grödor' där du kan se alla värdena på de grödor u vill plantera, och sedan gå till 'Ändra värden' där vi beskriver hur du kan ändra värdena på din jord så at tde matchar med din valda gröda. Lyckligt Odlande!"
-        
+        else if (temp_large == true && ph_large == true){
+            resultDiv.textContent = "Din odlingsplats har för högt ph-värde och för hög snitttemperatur för att fungera med grödorna i vår databas!"
+        }
+        else if (temp_large == true && ph_small == true){
+            resultDiv.textContent = "Din odlingsplats har för lågt ph-värde och för hög snitttemperatur för att fungera med grödorna i vår databas!"
+        }
+        else if (temp_small == true && ph_large == true){
+            resultDiv.textContent = "Din odlingsplats har för högt ph-värde och för låg snitttemperatur för att fungera med grödorna i vår databas!"
+        }
+        else if (temp_small == true && ph_small == true){
+            resultDiv.textContent = "Din odlingsplats har för lågt ph-värde och för låg snitttemperatur för att fungera med grödorna i vår databas!"
+        }
+        else if (ph_small == true){
+            resultDiv.textContent = "Din jord har för lågt ph-värde för att fungera med grödorna i vår databas!"
+        }
+        else if (ph_large == true){
+            resultDiv.textContent = "Din jord har för högt ph-värde för att fungera med grödorna i vår databas!"
+        }
+        else if (temp_small == true){
+            resultDiv.textContent = "Din odlingsplats har för låg snitttemperatur för att fungera med grödorna i vår databas!"
+        }
+        else if (temp_large == true){
+            resultDiv.textContent = "Din odlingsplats har för hög snittteemperatur för att fungera med grödorna i vår databas!"
+        }
+        else if (jord_problem == true){
+            resultDiv.textContent = "Din jordstruktur matchar inte med din odlingsplats ph-värde och snitttemperatur!"
+        }
+       
     });
 } else if (window.location.pathname === '/rev_kalk.html') {
 
     document.getElementById('dataForm2').addEventListener('submit', function(event) {
         event.preventDefault();
 
-        // Hämta värdet från formuläret
         const groda = document.getElementById('groda').value;
 
-        // Definiera alla grödor som objekt
         var vete = {
             ph: [6.0,6.5,7.0,7.5],
             // moisture: [50, 55, 60, 65, 70],
@@ -378,14 +455,9 @@ if (window.location.pathname === '/index.html') {
 
         }
 
-
-
-        // (Fortfarande alla andra grödor här...)
-
         let alla_grodor = [potatis, vete, korn, raps, morot, kål, råg, sockerbeta, majs, bönor, kärlselleri, tomater, havre];
         let output = [];
 
-        // Loopa igenom alla grödor och hitta den valda
         for (let i = 0; i < alla_grodor.length; i++) {
             if (alla_grodor[i].namn == groda) {
                 const grodaData = alla_grodor[i];
