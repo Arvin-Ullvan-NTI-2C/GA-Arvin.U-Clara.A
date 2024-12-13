@@ -165,8 +165,6 @@ if (window.location.pathname === '/index.html') {
         let ph_large_count = 0
         let temp_small_count = 0
         let temp_large_count = 0
-        let jord_count = 0
-        let removed = 0
 
         for (let i = 0; i < grodor.length; i++) {
             
@@ -188,7 +186,7 @@ if (window.location.pathname === '/index.html') {
                 }
                 if (counter == grodor[i].ph.length){
                     output = output.filter( item => item !== grodor[i].namn);
-                    removed += 1
+           
                 }
                 y += 1
             }
@@ -221,7 +219,7 @@ if (window.location.pathname === '/index.html') {
 
                 if (counter == grodor[i].temp.length){
                     output = output.filter( item => item !== grodor[i].namn);
-                    removed += 1
+                  
                 }
                 y += 1
             }
@@ -269,17 +267,12 @@ if (window.location.pathname === '/index.html') {
                 if (grodor[i].jordstruktur[y] !== jordstruktur) {
                     counter += 1
                 }
-
                 if (counter == grodor[i].jordstruktur.length){
                     output = output.filter( item => item !== grodor[i].namn);
-                    jord_count += 1
                 }
                 y += 1
             }
-
-           if (jord_count > (grodor.length - removed)) {
-                jord_problem = true;
-           }
+           
             
             
         }
@@ -314,9 +307,10 @@ if (window.location.pathname === '/index.html') {
         else if (temp_large == true){
             resultDiv.textContent = "Din odlingsplats har för hög snittteemperatur för att fungera med grödorna i vår databas!"
         }
-        else if (jord_problem == true){
-            resultDiv.textContent = "Din jordstruktur matchar inte med din odlingsplats ph-värde och snitttemperatur!"
-        }
+        else 
+        resultDiv.textContent = "Dina värden matchar tyvärr inte med någon av våra grödor i vår databas, gå till 'Attributer' för att se vilka egenskaper våra grödor har!"
+
+
        
     });
 } else if (window.location.pathname === '/rev_kalk.html') {
