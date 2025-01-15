@@ -97,9 +97,12 @@ html {
     /* height: 100%; Full-height: remove this if you want "auto" height  */
     /* Set the width of the sidebar */
     position: fixed; /* Fixed Sidebar (stay in place on scroll) */
-    z-index: 1; /* Stay on top */
-    /* top: 1; 0 =Stay at the top */
-    left: 0;
+    z-index: 101; /* Stay on top */
+    /* top: 0; 
+    bottom: 0; */
+    /*top0 
+    =Stay at the top */
+    left: 1;
     background-color: rgba(0, 0, 0, 0.3);
     overflow-x: hidden; /* Disable horizontal scroll */
     padding: 3rem;
@@ -259,7 +262,7 @@ input {
     border-radius: 5px;
     width: 200px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-    z-index: 30;
+    z-index: 1001;
 }
 
 .info:hover .info-text {
