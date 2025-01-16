@@ -8,7 +8,7 @@ if (window.location.pathname === '/index.html') {
         // const moisture = parseFloat(document.getElementById('moistureValue').value);
         // const soilColor = document.getElementById('soilColor').value; 
         const jordstruktur = document.getElementById('jordstruktur').value;
-
+        PhValue = ph
         
         if (ph < 1 || ph > 14) {
             alert("pH-värdet måste vara mellan 1 och 14.");
@@ -313,7 +313,6 @@ if (window.location.pathname === '/index.html') {
 
        
     });
-} else if (window.location.pathname === '/rev_kalk.html') {
 
     document.getElementById('dataForm2').addEventListener('submit', function(event) {
         event.preventDefault();
@@ -455,6 +454,7 @@ if (window.location.pathname === '/index.html') {
         for (let i = 0; i < alla_grodor.length; i++) {
             if (alla_grodor[i].namn == groda) {
                 const grodaData = alla_grodor[i];
+
                 
                 function formatRange(range) {
                     return range[0] + " - " + range[range.length - 1];
@@ -466,6 +466,7 @@ if (window.location.pathname === '/index.html') {
                     Temperatur: ${formatRange(grodaData.temp)} °C <br>
                     Jordstruktur: ${grodaData.jordstruktur.join(', ')} <br>
                 `);
+
                 //  Jordfuktighet: ${formatRange(grodaData.moisture)} % <br>
                 // Jordfärg: ${grodaData.soilColor.join(', ')} <br>
                 // detta var inuti output innan
@@ -477,4 +478,4 @@ if (window.location.pathname === '/index.html') {
         const resultDiv = document.getElementById('result2');
         resultDiv.innerHTML = output.join("<br>");
     });
-}
+} 
