@@ -20,6 +20,13 @@ if (window.location.pathname === '/index.html') {
             return;
         }
 
+        const formData = {
+            ph: parseFloat(document.getElementById('phValue').value),
+            temp: parseFloat(document.getElementById('tempValue').value),
+            jordstruktur: document.getElementById('jordstruktur').value
+        };
+
+
        
         // if (moisture < 0 || moisture > 100) {
         //     alert("Fuktighetsprocenten måste vara mellan 0 och 100.");
@@ -279,6 +286,8 @@ if (window.location.pathname === '/index.html') {
 
 
         const resultDiv = document.getElementById('result');
+        resultDiv.dataset.formData = JSON.stringify(formData); // Lagrar som JSON-sträng
+
 
         if (output.length > 0)
     
@@ -311,11 +320,16 @@ if (window.location.pathname === '/index.html') {
         resultDiv.textContent = "Dina värden matchar tyvärr inte med någon av våra grödor i vår databas, gå till 'Attributer' för att se vilka egenskaper våra grödor har!"
 
 
+        resultDiv.dataset.formData = JSON.stringify(formData); // Lagrar som JSON-sträng
+
+
        
     });
 
     document.getElementById('dataForm2').addEventListener('submit', function(event) {
         event.preventDefault();
+
+        
 
         const groda = document.getElementById('groda').value;
 
@@ -448,18 +462,21 @@ if (window.location.pathname === '/index.html') {
 
         }
 
+        
         let alla_grodor = [potatis, vete, korn, raps, morot, kål, råg, sockerbeta, majs, bönor, kärlselleri, tomater, havre];
         let output = [];
 
+
         for (let i = 0; i < alla_grodor.length; i++) {
             if (alla_grodor[i].namn == groda) {
-                const grodaData = alla_grodor[i];
+                    let grodaData = alla_grodor[i];
 
                 
                 function formatRange(range) {
                     return range[0] + " - " + range[range.length - 1];
                 }
-        
+                
+            
                 output.push(`
                     ${grodaData.namn} behöver dessa värden: <br>
                     PH: ${formatRange(grodaData.ph)} <br>
@@ -467,15 +484,61 @@ if (window.location.pathname === '/index.html') {
                     Jordstruktur: ${grodaData.jordstruktur.join(', ')} <br>
                 `);
 
+                const resultDiv = document.getElementById('result');
+                const datasetValue = resultDiv.dataset.formData;
+
+                // Kontrollera om dataset.formData finns och är korrekt
+                if (datasetValue) {
+
+                    const formData = JSON.parse(datasetValue);
+                    const groda = document.getElementById('groda').value;
+                    if (formData.ph < grodaData.ph[0]) {
+                        output.push("Ditt ph värde är: " + formData.ph + "<br>" + "alltså behöver du höja ditt ph-värde. För att göra detta kan du tillsätta kalk!"+ "<br>")
+                    }
+                    if (formData.ph > grodaData.ph[(grodaData.ph.length - 1)]) {
+                        output.push("Ditt ph värde är: " + formData.ph + "<br>" + "alltså behöver du sänka ditt ph-värde. För att göra detta kan du tillsätta svavel!"+ "<br>")
+                    }
+                    if (formData.temp < grodaData.temp[0]) {
+                        output.push("Din snitt temperatur är: " + formData.temp + "°C" + "<br>" + "alltså behöver du ett varmare klimat. Detta blir svårt att göra om du odlar utomhus, men om det är i ett växthus eller inomhus" + "<br>"+ "rekommenderar vi att höja temperaturen på dina element!" + "<br>")
+                    }
+                    if (formData.temp > grodaData.temp[(grodaData.temp.length - 1)]) {
+                        output.push("Din snitt temperatur är: " + formData.temp + "°C" + "<br>" + "alltså behöver du ett kallare klimat. Detta blir svårt att göra om du odlar utomhus, men om det är i ett växthus eller inomhus" + "<br>" + "rekommenderar vi att sänka temperaturen på dina element!"+ "<br>")
+                    }
+                    let count = 0
+                    for (let y = 0; y < grodaData.jordstruktur.length; y++) {
+                        
+                        if (formData.jordstruktur !== grodaData.jordstruktur[y]){
+                            count += 1
+                        }
+
+                    }
+                    if (count == grodaData.jordstruktur.length) {
+                        output.push("Din jordstruktur är: " + formData.jordstruktur + "<br>" + "alltså behöver du byta ut din jord!")
+                    }
+
+                    console.log('Data från dataset:', formData);
+                    console.log('Groda:', groda);
+
+                    // Gör beräkningar med formData
+                } else {
+                    console.error('Inget giltigt formData finns i dataset.');
+                }
+
                 //  Jordfuktighet: ${formatRange(grodaData.moisture)} % <br>
                 // Jordfärg: ${grodaData.soilColor.join(', ')} <br>
                 // detta var inuti output innan
+                
+                
             }
         }
         
 
         // Visa resultatet i result2 div
-        const resultDiv = document.getElementById('result2');
-        resultDiv.innerHTML = output.join("<br>");
+        
+
+        const resultDiv2 = document.getElementById('result2');
+        resultDiv2.innerHTML = output.join("<br>");
+        
+        
     });
 } 
