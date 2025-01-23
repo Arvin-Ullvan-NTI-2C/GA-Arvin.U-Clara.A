@@ -499,10 +499,10 @@ if (window.location.pathname === '/index.html') {
                         output.push("Ditt ph värde är: " + formData.ph + "<br>" + "alltså behöver du sänka ditt ph-värde. För att göra detta kan du tillsätta svavel!"+ "<br>")
                     }
                     if (formData.temp < grodaData.temp[0]) {
-                        output.push("Din snitt temperatur är: " + formData.temp + "°C" + "<br>" + "alltså behöver du ett varmare klimat. Detta blir svårt att göra om du odlar utomhus, men om det är i ett växthus eller inomhus" + "<br>"+ "rekommenderar vi att höja temperaturen på dina element!" + "<br>")
+                        output.push("Din snitt temperatur är: " + formData.temp + "°C" + "<br>" + "alltså behöver du ett varmare klimat. Detta blir svårt att göra om du odlar utomhus," + "<br>" + "men om det är i ett växthus eller inomhus" + "<br>"+ "rekommenderar vi att höja temperaturen på dina element!" + "<br>")
                     }
                     if (formData.temp > grodaData.temp[(grodaData.temp.length - 1)]) {
-                        output.push("Din snitt temperatur är: " + formData.temp + "°C" + "<br>" + "alltså behöver du ett kallare klimat. Detta blir svårt att göra om du odlar utomhus, men om det är i ett växthus eller inomhus" + "<br>" + "rekommenderar vi att sänka temperaturen på dina element!"+ "<br>")
+                        output.push("Din snitt temperatur är: " + formData.temp + "°C" + "<br>" + "alltså behöver du ett kallare klimat. Detta blir svårt att göra om du odlar utomhus," + "<br>" + "men om det är i ett växthus eller inomhus" + "<br>" + "rekommenderar vi att sänka temperaturen på dina element!"+ "<br>")
                     }
                     let count = 0
                     for (let y = 0; y < grodaData.jordstruktur.length; y++) {

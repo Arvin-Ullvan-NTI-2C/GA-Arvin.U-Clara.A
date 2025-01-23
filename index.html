@@ -20,9 +20,6 @@
                     <a id="link"href="index.html">Räknare</a>
                 </li>
                 <li>
-                    <a id="link"href="rev_kalk.html">Vilka attribut?</a>
-                </li>
-                <li>
                     <a id="link"href="tutorial.html">Hur mäter jag värdena?</a>
                 </li>
                 <li>
@@ -56,14 +53,14 @@
     <form id="dataForm" style="font-family: Raleway-Medium;">
         <label for="phValue">Skriv in ditt pH-värde:
             <span class="info">?
-                <span class="info-text" style="font-family: Raleway-Medium;">För att mäta ditt ph-värde behövs en ph-mätare. Lägg din jord i en burk och fyll med destilleratvatten. Sedan doppa ph-mätar stickan och jämför färgen med vilket ph-värde den står för. Avrunda sedan till närmsa hel eller halvtal.</span>
+                <span class="info-text" style="font-family: Raleway-Medium;">För att mäta ditt ph-värde behövs en ph-mätare. Lägg din jord i en burk och fyll med samma vatten som används när du vattnar dina grödor. Sedan doppa ph-mätar stickan och jämför färgen med vilket ph-värde den står för. Avrunda sedan till närmsa hel eller halvtal.</span>
             </span>
         </label>
         <input type="number" id="phValue" name="phValue" step="0.5" required>
 
         <label for="tempValue">Skriv in snitt värdet av din temperatur under den senaste veckan:
             <span class="info">?
-                <span class="info-text" style="font-family: Raleway-Medium;">Du kan mäta temperaturen genom en temperaturmätare eller bara kolla din lokala väderapp.</span>
+                <span class="info-text" style="font-family: Raleway-Medium;">Du kan mäta temperaturen genom en temperaturmätare eller kolla din lokala väderapp. Gör detta för de senaste eller kommande 7 dagarna, ta sedan medelvärdet av dessa värden.</span>
             </span>
         </label>
         <input type="number" id="tempValue" name="tempValue" step="1" required>
@@ -88,7 +85,7 @@
         </select> -->
         <label for="jordstruktur">Välj strukturen på din jord:
             <span class="info">?
-                <span class="info-text">Du kan göra ett enkelt test för att ta reda på strukturen på din jord. Fukta lite jord och försök skapa en boll. Håller formen är det mer lera, om den smulas är det sand. Finns en smidig, formbar känsla betyder det silt.</span>
+                <span class="info-text">Du kan göra ett enkelt test för att ta reda på strukturen på din jord. Fukta lite jord och försök skapa en boll. Håller formen är det mer lera, om den smulas är det sand. Finns en smidig, formbar känsla betyder det silt. Är osäker eller om det känns som lite av varje, välj då Loam.</span>
             </span>
         </label>
         <select id="jordstruktur" name="jordstruktur" style="font-family: Raleway-Medium;">
@@ -109,14 +106,14 @@
     <!-- REVERSE CALC vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv-->
     <section id="section4">
 
-        <h1 style="font-family: Raleway-Light;">Vilka mätvärden passar just din gröda?</h1>
+        <h1 style="font-family: Raleway-Light;">Är du inte är nöjd med dina resultat, eller har du kanske en specifik planta du vill odla? <br> Ta reda på vilka mätvärden som krävs.</h1>
         
         <form id="dataForm2" style="font-family: Raleway-Medium;">
             
             
             <label for="groda">Välj grödan du vill kolla på:
                 <span class="info">?
-                    <span class="info-text">Om du är osäker på vilken färg din jord är välj den färg som närmst liknar den du har.</span>
+                    <span class="info-text">Välj den gröda av de i vår databas du vill odla för att ta reda på vilka värden som krävs.</span>
                 </span>
             </label>
             <select id="groda" name="groda" style="font-family: Raleway-Medium;">

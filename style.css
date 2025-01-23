@@ -226,8 +226,10 @@ input {
 }
 
 #result {
+    font-family: Raleway-Light;
     font-weight: bold;
-    margin-top: 10px;
+    margin-top: 3vh;
+    font-size: 1.5rem;
 }
 
 #result2 {
