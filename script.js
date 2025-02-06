@@ -481,7 +481,7 @@ if (window.location.pathname === '/index.html') {
                     ${grodaData.namn} behöver dessa värden: <br>
                     PH: ${formatRange(grodaData.ph)} <br>
                     Temperatur: ${formatRange(grodaData.temp)} °C <br>
-                    Jordstruktur: ${grodaData.jordstruktur.join(', ')} <br>
+                    Jordtyp: ${grodaData.jordstruktur.join(', ')} <br>
                 `);
 
                 const resultDiv = document.getElementById('result');
@@ -513,7 +513,7 @@ if (window.location.pathname === '/index.html') {
 
                     }
                     if (count == grodaData.jordstruktur.length) {
-                        output.push("Din jordstruktur är: " + formData.jordstruktur + "<br>" + "alltså behöver du byta ut din jord!")
+                        output.push("Din jordtyp är: " + formData.jordstruktur + "<br>" + "alltså behöver du byta ut din jord!")
                     }
 
                     console.log('Data från dataset:', formData);
