@@ -291,33 +291,33 @@ if (window.location.pathname === '/index.html') {
 
         if (output.length > 0)
     
-            resultDiv.textContent = "Din mest optimala gröda är: " + output.join(", ") + ". Lyckligt Odlande!";
+            resultDiv.innerHTML = "Din mest optimala gröda är: " + output.join(", ") + ". Lyckligt Odlande!";
         else if (temp_large == true && ph_large == true){
-            resultDiv.textContent = "Din odlingsplats har för högt ph-värde och för hög snitttemperatur för att fungera med grödorna i vår databas!"
+            resultDiv.innerHTML = "Din odlingsplats har för högt ph-värde och för hög snitttemperatur <br> för att fungera med grödorna i vår databas!"
         }
         else if (temp_large == true && ph_small == true){
-            resultDiv.textContent = "Din odlingsplats har för lågt ph-värde och för hög snitttemperatur för att fungera med grödorna i vår databas!"
+            resultDiv.innerHTML = "Din odlingsplats har för lågt ph-värde och för hög snitttemperatur <br> för att fungera med grödorna i vår databas!"
         }
         else if (temp_small == true && ph_large == true){
-            resultDiv.textContent = "Din odlingsplats har för högt ph-värde och för låg snitttemperatur för att fungera med grödorna i vår databas!"
+            resultDiv.innerHTML = "Din odlingsplats har för högt ph-värde och för låg snitttemperatur <br> för att fungera med grödorna i vår databas!"
         }
         else if (temp_small == true && ph_small == true){
-            resultDiv.textContent = "Din odlingsplats har för lågt ph-värde och för låg snitttemperatur för att fungera med grödorna i vår databas!"
+            resultDiv.innerHTML = "Din odlingsplats har för lågt ph-värde och för låg snitttemperatur <br> för att fungera med grödorna i vår databas!"
         }
         else if (ph_small == true){
-            resultDiv.textContent = "Din jord har för lågt ph-värde för att fungera med grödorna i vår databas!"
+            resultDiv.innerHTML = "Din jord har för lågt ph-värde <br> för att fungera med grödorna i vår databas!"
         }
         else if (ph_large == true){
-            resultDiv.textContent = "Din jord har för högt ph-värde för att fungera med grödorna i vår databas!"
+            resultDiv.innerHTML = "Din jord har för högt ph-värde <br> för att fungera med grödorna i vår databas!"
         }
         else if (temp_small == true){
-            resultDiv.textContent = "Din odlingsplats har för låg snitttemperatur för att fungera med grödorna i vår databas!"
+            resultDiv.innerHTML = "Din odlingsplats har för låg snitttemperatur <br> för att fungera med grödorna i vår databas!"
         }
         else if (temp_large == true){
-            resultDiv.textContent = "Din odlingsplats har för hög snittteemperatur för att fungera med grödorna i vår databas!"
+            resultDiv.innerHTML = "Din odlingsplats har för hög snittteemperatur <br> för att fungera med grödorna i vår databas!"
         }
         else 
-        resultDiv.textContent = "Dina värden matchar tyvärr inte med någon av våra grödor i vår databas, gå till 'Attributer' för att se vilka egenskaper våra grödor har!"
+        resultDiv.innerHTML = "Dina värden matchar tyvärr inte med någon av våra grödor i vår databas, <br> gå till 'Attributer' för att se vilka egenskaper våra grödor har!"
 
 
         resultDiv.dataset.formData = JSON.stringify(formData); // Lagrar som JSON-sträng
