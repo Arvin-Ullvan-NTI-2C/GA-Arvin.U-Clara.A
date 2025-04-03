@@ -6,6 +6,7 @@ Vete:
 ph/jordtyp/temperatur 
 Wikifarmer editorial team. "Wheat soil preparation, soil requirements, and seeding requirements". hämtad 21/11-2024(https://wikifarmer.com/en/wheat-soil-preparation-soil-requirements-and-seeding-requirements/  
 
+
 Råg:
 ph/jordtyp 
 Rye. (2025, 31 Januari) I "Wikipedia". hämtad 21/11-2024 https://en.wikipedia.org/wiki/Rye 
@@ -14,9 +15,11 @@ temperatur
 EOS DATA ANALYTICS. "Rye growing guide: In-depth knowledge to boost productivity"  hämtad 21/11-2024
 https://eos.com/crop-management-guide/rye-growth-stages/
 
+
 Majs: 
 ph/jordtyp/temperatur
 Wikifarmer editorial team. "Maize soil preparation, soil requirements and seeding requirements" hämtad 21/11-2024 https://wikifarmer.com/en/maize-soil-preparation-soil-requirements-and-seeding-requirements/  
+
 
 Bönor: 
 ph/jordtyp 
@@ -26,9 +29,11 @@ temperatur
 UCANR, "Grow & car sheets - UC marin master gardens" 
 hämtad 21/11-2024 https://marinmg.ucanr.edu/EDIBLES/EDIBLES_GROW_SHEETS/?uid=69&ds=996 
 
+
 Kärlselleri:
 ph,jordtyp,temperatur 
 Wikifarmer editorial team. "Celery soil preparation, soil requirements, and seeding requirements" hämtad 21/11-2024 https://wikifarmer.com/en/celery-soil-preparation-soil-requirements-and-seeding-requirements/
+
 
 Morot:
 temperatur 
@@ -37,6 +42,7 @@ Wikifarmer editorial team.(14/11-2024) "Carrot plant information and variety sel
 ph,jordtyp 
 Schuh.M, et al. (2022) "Growing carrots and parsnips in home gardens" hämtad 21/11-2024 https://extension.umn.edu/vegetables/growing-carrots-and-parsnips#soil-testing-and-fertilizer-190710 
 
+
 potatis
 ph,jordtyp 
 Potato (2025, 2 Februari) I Wikipedia. hämtad 21/11-2024 https://en.wikipedia.org/wiki/Potato#Cultivation  
@@ -44,9 +50,11 @@ Potato (2025, 2 Februari) I Wikipedia. hämtad 21/11-2024 https://en.wikipedia.o
 temperatur
 Manitoba Argriculture, Food and Rural initiatives. "Growing potatoes in the home garden" hämtad 21/11-2024 https://www.gov.mb.ca/inr/pdf/pubs/mafri-potatoe.pdf 
 
+
 Kål
 ph,jordtyp, temperatur 
 Wikifarmer editorial team. "How to grow cabbage - cabbage complete growing guide from seeding to harvesting" hämtad 21/11-2024 https://wikifarmer.com/en/how-to-grow-cabbage-cabbage-complete-growing-guide-from-seeding-to-harvesting/ 
+
 
 tomater
 ph,jordtyp,temperatur 
@@ -57,6 +65,7 @@ raps
 ph,jordtyp,temperatur 
 ICL. "Growing oilseed rape - fertilizers for rapeseed" hämtad 30/11-2024 https://icl-growingsolutions.com/agriculture/crops/oil-seed-rape/ 
 
+
 sockerbete
 ph,jordtyp 
 Wikifarmer editorial team. (30/10-2024) "How to cultivate sugarcane in your backyard" hämtad 30/11-2024 https://wikifarmer.com/en/how-to-cultivate-sugarcane-in-your-backyard/ 
@@ -64,9 +73,11 @@ Wikifarmer editorial team. (30/10-2024) "How to cultivate sugarcane in your back
 temperatur 
 TNAU. "Expert system for sugarcane" hämtad 02/12-2024 https://agritech.tnau.ac.in/expert_system/sugar/botany&climate.html  (to the university - https://tnau.ac.in/) 
 
+
 havre
 ph,temperatur,jordtyp
 Curell. C, et al (07/09-2012) "Champion of cover crops: oats" hämtad 02/12-2024 https://www.canr.msu.edu/news/champion_of_cover_crops_oats (denna källa ger inte en range som vi helst har, därför väljer jag att lägga till +- 2 grader till vad denna källa säger då det inte borde ha en gigantisk betydelse)
+
 
 korn
 temperatur 
@@ -88,3 +99,6 @@ Hammar, R. (08/09-2024) "Förstå ph-värdet i jorden och hur man testar det". h
 
 länk till jord test:
 Alsätters trädgårdar, (08/02-2020) "Enkla jordprov du kan göra själv" hämtad 26/01-2025 https://www.alsatterstradgardar.se/l/sa-kan-du-undersoka-din-jord-sjalv/ 
+
+
+Myndigheten för samhällsskydd och beredskap (senast uppdaterad 20/03-2025), "Odla själv", hämtad 03/04-2025 https://www.msb.se/sv/rad-till-privatpersoner/hemberedskap---preppa-for-minst-en-vecka/tillgang-till-mat-i-kris/att-odla-sjalv/ 
